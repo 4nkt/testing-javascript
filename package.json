@@ -1,0 +1,7 @@
+{
+  "name": "testing-javascript",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}
