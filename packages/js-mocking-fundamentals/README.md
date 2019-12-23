@@ -4,9 +4,15 @@ Learn how mocking in JavaScript tests works by implementing them from scratch!
 
 ---
 
+In this material, we have a set of `no-framework` tests that correspond to a set
+of jest tests (in the `__tests__` directory). The idea is that (with the
+exception of the first test), you look at the jest version first, then see how
+that would be implemented without a testing framework.
+
 Order of material:
 
 1.  `monkey-patching.js` (no jest version)
+2.  `mock-fn.js`
 
 The files are intended to test the `thumb-war.js` module and mock the `utils`
 module.
