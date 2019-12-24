@@ -15,6 +15,7 @@ Order of material:
 2.  `mock-fn.js`
 3.  `spy.js`
 4.  `inline-module-mock.js`
+5.  `external-mock-module.js`
 
 The files are intended to test the `thumb-war.js` module and mock the `utils`
 module.
