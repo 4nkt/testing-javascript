@@ -2,7 +2,7 @@
   "name": "jest-cypress-react-babel-webpack",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "dev": "webpack-dev-server --mode=development",
