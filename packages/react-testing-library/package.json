@@ -64,5 +64,8 @@
     "bracketSpacing": false,
     "jsxBracketSameLine": false,
     "proseWrap": "always"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3"
   }
 }
