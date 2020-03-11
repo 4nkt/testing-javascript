@@ -1,6 +1,11 @@
 module.exports = {
   ...require('./test/jest-common'),
-  collectCoverageFrom: ['**/src/**/*.js'],
+  collectCoverageFrom: [
+    '**/src/**/*.js',
+    '!**/__tests__/**',
+    '!**/__server_tests__/**',
+    '!**/node_modules/**',
+  ],
   coverageThreshold: {
     global: {
       statements: 15,
@@ -19,5 +24,6 @@ module.exports = {
     './test/jest.lint.js',
     './test/jest.client.js',
     './test/jest.server.js',
+    './server',
   ],
 }

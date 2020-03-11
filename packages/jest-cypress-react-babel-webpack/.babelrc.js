@@ -1,5 +1,5 @@
-const isProd = String(process.env.NODE_ENV) === 'production'
 const isTest = String(process.env.NODE_ENV) === 'test'
+const isProd = String(process.env.NODE_ENV) === 'production'
 
 module.exports = {
   presets: [
