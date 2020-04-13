@@ -1,4 +1,4 @@
-# Jest and Cypress with React, Babel, and Webpack
+# Jest and Cypress with React, Babel and Webpack
 
 See how to configure Jest and Cypress with React, Babel, and Webpack
 
