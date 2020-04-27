@@ -3,16 +3,19 @@
 import cases from 'jest-in-case'
 import {isPasswordAllowed} from '../auth'
 
+function casify(obj) {
+  return Object.entries(obj).map(([name, password]) => ({
+    name: `${password} - ${name}`,
+    password,
+  }))
+}
+
 cases(
   'isPasswordAllowed: valid passwords',
   ({password}) => {
     expect(isPasswordAllowed(password)).toBe(true)
   },
-  {
-    'valid password': {
-      password: '!aBc123',
-    },
-  },
+  casify({'valid password': '!aBc123'}),
 )
 
 cases(
@@ -20,24 +23,12 @@ cases(
   ({password}) => {
     expect(isPasswordAllowed(password)).toBe(false)
   },
-  {
-    'too short': {
-      password: 'a2c!',
-    },
-    'no letters': {
-      password: '123456!',
-    },
-    'no numbers': {
-      password: 'ABCdef!',
-    },
-    'no uppercase letters': {
-      password: 'abc123!',
-    },
-    'no lowercase letters': {
-      password: 'ABC123!',
-    },
-    'no non-alphanumeric characters': {
-      password: 'ABCdef123',
-    },
-  },
+  casify({
+    'too short': 'a2c!',
+    'no letters': '123456!',
+    'no numbers': 'ABCdef!',
+    'no uppercase letters': 'abc123!',
+    'no lowercase letters': 'ABC123!',
+    'no non-alphanumeric characters': 'ABCdef123',
+  }),
 )
