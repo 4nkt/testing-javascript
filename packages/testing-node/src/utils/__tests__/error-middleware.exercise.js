@@ -3,16 +3,22 @@
 import {UnauthorizedError} from 'express-jwt'
 import errorMiddleware from '../error-middleware'
 
-test('responds with 401 for express-jwt UnauthorizedError', () => {
-  const req = {}
+function buildRes(overrides) {
   const res = {
     json: jest.fn(() => res),
     status: jest.fn(() => res),
+    ...overrides,
   }
+  return res
+}
+
+test('responds with 401 for express-jwt UnauthorizedError', () => {
+  const req = {}
+  const res = buildRes()
   const next = jest.fn()
-  const error = new UnauthorizedError('fake_code', {
-    message: 'Fake Error Message',
-  })
+  const code = 'fake_code'
+  const message = 'Fake Error Message'
+  const error = new UnauthorizedError(code, {message})
   errorMiddleware(error, req, res, next)
   expect(next).not.toHaveBeenCalled()
   expect(res.status).toHaveBeenCalledWith(401)
@@ -26,11 +32,7 @@ test('responds with 401 for express-jwt UnauthorizedError', () => {
 
 test('calls next if headersSent is true', () => {
   const req = {}
-  const res = {
-    json: jest.fn(() => res),
-    status: jest.fn(() => res),
-    headersSent: true,
-  }
+  const res = buildRes({headersSent: true})
   const next = jest.fn()
   const error = new Error('blah')
   errorMiddleware(error, req, res, next)
@@ -42,10 +44,7 @@ test('calls next if headersSent is true', () => {
 
 test('responds with 500 and the error object', () => {
   const req = {}
-  const res = {
-    json: jest.fn(() => res),
-    status: jest.fn(() => res),
-  }
+  const res = buildRes()
   const next = jest.fn()
   const error = new Error('blah')
   errorMiddleware(error, req, res, next)
