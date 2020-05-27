@@ -24,7 +24,11 @@ test('auth flow', async () => {
     password,
   })
 
-  console.log(response.data)
+  expect(response.data.user).toEqual({
+    token: expect.any(String),
+    id: expect.any(String),
+    username,
+  })
   // 🐨 assert that the result you get back is correct
   // 💰 it'll have an id and a token that will be random every time.
   // You can either only check that `result.data.user.username` is correct, or
