@@ -39,13 +39,12 @@ test('listItem CRUD', async () => {
     bookId: book.id,
   })
 
-  // 💰 you might find this useful for the future requests:
-  // const listItemId = cData.listItem.id
-  // const listItemIdUrl = `list-items/${listItemId}`
+  const listItemId = cData.listItem.id
+  const listItemIdUrl = `list-items/${listItemId}`
 
   // READ
-  // 🐨 make a GET to the `listItemIdUrl`
-  // 🐨 assert that this returns the same thing you got when you created the list item
+  const rData = await authAPI.get(listItemIdUrl)
+  expect(rData.listItem).toEqual(cData.listItem)
 
   // UPDATE
   // 🐨 make a PUT request to the `listItemIdUrl` with some updates
