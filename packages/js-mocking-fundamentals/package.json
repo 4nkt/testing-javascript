@@ -1,5 +1,6 @@
 {
   "name": "js-mocking-fundamentals",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "test": "jest",
@@ -7,6 +8,6 @@
   },
   "devDependencies": {
     "create-jest-runner": "^0.5.3",
-    "jest": "^24.9.0"
+    "jest": "^26.0.1"
   }
 }

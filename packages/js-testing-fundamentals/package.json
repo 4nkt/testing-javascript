@@ -1,10 +1,11 @@
 {
   "name": "js-testing-fundamentals",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.0.1"
   }
 }
