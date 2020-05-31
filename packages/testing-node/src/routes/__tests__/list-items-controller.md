@@ -190,8 +190,3 @@ that you can test. See how much of it you can get covered.
 
 You'll need to mock `../../db/list-items` and import it for a few of the tests,
 so watch out for that.
-
-## 🦉 Elaboration & Feedback
-
-After the instruction, copy the URL below into your browser:
-http://ws.kcd.im/?ws=Testing%20Node%20Apps&e=Testing%20Controllers&em=

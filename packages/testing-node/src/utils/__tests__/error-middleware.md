@@ -137,8 +137,3 @@ For this extra credit, use those test object factories.
 💰 tip, because the way Jest is configured in this project, you can import that
 directly like this:
 `import {buildRes, buildReq, buildNext} from 'utils/generate'`
-
-## 🦉 Elaboration & Feedback
-
-After the instruction, copy the URL below into your browser:
-http://ws.kcd.im/?ws=Testing%20Node%20Apps&e=Testing%20Middleware&em=

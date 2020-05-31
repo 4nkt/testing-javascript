@@ -8,7 +8,7 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "start": "node ./scripts/codesandbox-page.js",
+    "start": "node index.js",
     "test": "is-ci \"test:final:coverage\" \"test:exercise:watch\"",
     "test:exercise": "jest --config test/jest.config.exercises.js",
     "test:exercise:watch": "npm run test:exercise -- --watchAll",
@@ -19,7 +19,6 @@
     "test:final:coverage": "npm run test:final -- --coverage",
     "format": "prettier --write \"**/*.+(js|json|css|md|mdx|html)\"",
     "lint": "eslint .",
-    "setup": "node ./scripts/setup && npm run validate && node ./scripts/autofill-feedback-email.js",
     "validate": "npm-run-all --parallel test:final:coverage lint"
   },
   "dependencies": {

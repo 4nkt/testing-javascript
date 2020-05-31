@@ -134,7 +134,7 @@ To take it step further, you can also use the `interceptors` API to modify every
 response as it comes in. This allows us to make more helpful error messages, and
 automatically resolve to the `data` property of the response.
 
-```js
+```javascript
 // ...
 import {getData, handleRequestFailure} from 'utils/async'
 
@@ -198,8 +198,3 @@ invalid password, etc.).
 > better to test these kinds of edge cases closer to the authentication code,
 > and I would have a hard time arguing for or against that approach. Do what
 > feels best for you.
-
-## 🦉 Elaboration & Feedback
-
-After the instruction, copy the URL below into your browser:
-http://ws.kcd.im/?ws=Testing%20Node%20Apps&e=Testing%20Authentication%20API%20Routes&em=

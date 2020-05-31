@@ -1,6 +1,6 @@
 # Testing Node
 
-👋 hi there! This is a workshop repo to teach you how to test your Node.js Apps!
+👋 hi there! This is a workshop repo to learn how to test your Node.js Apps!
 
 ## Outline
 
@@ -29,37 +29,18 @@ yarn --version # or npm --version
 ```
 
 If you have trouble with any of these, learn more about the PATH environment
-variable and how to fix it here for [windows][win-path] or
-[mac/linux][mac-path].
+variable and how to fix it here for [windows][win-path] or [mac/linux][mac-path].
 
 ## Setup
 
-You should be able to work through the entire workshop in the browser. This is
-actually the recommended approach as it requires absolutely no setup whatsoever.
-Go to
-[this codesandbox](https://codesandbox.io/s/github/kentcdodds/testing-node-apps)
-and click `Fork` in the top right corner. Then click the `+` in the terminal and
-you can run `npm test` to get the test watch mode started.
-
-[![Edit testing-node-apps](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/kentcdodds/testing-node-apps)
-
-If you'd rather be able to work through the workshop on your own computer, then
-follow the following instructions.
-
 After you've made sure to have the correct things (and versions) installed, you
-should be able to just run a few commands to get set up:
+should be able to just run the following command to get set up:
 
-```
-git clone https://github.com/kentcdodds/testing-node-apps.git
-cd testing-node-apps
-npm run setup --silent
+```shell
+npm install
 ```
 
-This may take a few minutes. **It will ask you for your email.** This is
-optional and just automatically adds your email to the links in the project to
-make filling out some forms easier If you get any errors, please read through
-them and see if you can find out what the problem is. You may also want to look
-at [Troubleshooting](#troubleshooting).
+You can verify the setup is complete by starting the server `npm start`
 
 ## Running the tests
 
@@ -92,36 +73,9 @@ emoji characters are here to help you.
 - **Alfred the Alert** 🚨 will occasionally show up in the test failures with
   potential explanations for why the tests are failing.
 
-## Troubleshooting
-
-<details>
-
-<summary>"npm run setup" command not working</summary>
-
-Here's what the setup script does. If it fails, try doing each of these things
-individually yourself:
-
-```
-# verify your environment will work with the project
-node ./scripts/verify
-
-# install dependencies
-npm install
-
-# verify the project is ready to run
-npm run build
-npm run test:coverage
-```
-
-If any of those scripts fail, please try to work out what went wrong by the
-error message you get.
-
-</details>
-
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
 [git]: https://git-scm.com/
 [yarn]: https://yarnpkg.com/
-[win-path]:
-  https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
+[win-path]: https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
 [mac-path]: http://stackoverflow.com/a/24322978/971592
